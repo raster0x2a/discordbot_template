@@ -21,5 +21,5 @@ async def on_message(message):
         await message.channel.send("pong")
 
 if __name__ == "__main__":
-    token = os.environ['DISCODEBOT_TOKEN']
+    token = os.environ['DISCORDBOT_TOKEN']
     client.run(token)
