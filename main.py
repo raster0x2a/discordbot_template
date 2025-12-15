@@ -1,7 +1,11 @@
-import discord
 import os
 
-client = discord.Client()
+import discord
+
+
+intents = discord.Intents.all()
+client = discord.Client(intents=intents)
+
 @client.event
 async def on_ready(): 
     print('Logged in as')
@@ -17,7 +21,7 @@ async def on_message(message):
     if message.author.bot:
         return
 
-    if message.content == "# ping":
+    if message.content == "!ping":
         await message.channel.send("pong")
 
 if __name__ == "__main__":
